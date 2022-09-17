@@ -1,6 +1,4 @@
 '''
-CODER ZERO
-connect with me at: https://www.youtube.com/channel/UCKipQAvBc7CWZaPib4y8Ajg
 How to train custom yolov5: https://youtu.be/12UoOlsRwh8
 DATASET: 1) https://www.kaggle.com/datasets/deepakat002/indian-vehicle-number-plate-yolo-annotation
          2) https://www.kaggle.com/datasets/elysian01/car-number-plate-detection
@@ -14,11 +12,9 @@ import re
 import numpy as np
 import easyocr
 
-
 ##### DEFINING GLOBAL VARIABLE
 EASY_OCR = easyocr.Reader(['en']) ### initiating easyocr
 OCR_TH = 0.2
-
 
 
 
@@ -130,7 +126,7 @@ def main(img_path=None, vid_path=None,vid_out = None):
     print(f"[INFO] Loading model... ")
     ## loading the custom trained model
     # model =  torch.hub.load('ultralytics/yolov5', 'custom', path='last.pt',force_reload=True) ## if you want to download the git repo and then run the detection
-    model =  torch.hub.load('./yolov5-master', 'custom', source ='local', path='best.pt',force_reload=True) ### The repo is stored locally
+    model =  torch.hub.load('./yolov5-master', 'custom', source ='local', path='best.pt',force_reload=True) 
 
     classes = model.names ### class names in string format
 
